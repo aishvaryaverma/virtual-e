@@ -1,0 +1,33 @@
+.header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	z-index: 999;
+	display: flex;
+	background: white;
+	box-shadow: $box-shadow-bottom;
+
+	&__menu {
+		display: flex;
+		padding: 1.5rem;
+		align-items: center;
+	}
+
+	&__logo {
+		display: flex;
+		margin-left: 1rem;
+		// padding: 2rem 0 1rem;
+		padding: 2rem 0;
+		align-items: center;
+		svg { display: block; }
+		.text { font-size: $font-size-big; line-height: 3rem; }
+	}
+	
+	&__notification {
+		display: flex;
+		padding: 1.5rem;
+		margin-left: auto;
+		align-items: center;
+	}
+}

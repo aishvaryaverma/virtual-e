@@ -1,0 +1,17 @@
+// Buttons
+.btn {
+	font-size: $font-size-tiny;
+	display: inline-flex;
+	border: none;
+	outline: none;
+	line-height: 1;
+	box-shadow: none;
+	border-radius: 0;
+	color: $color-white;
+	padding: 1rem 1.5rem;
+	background: $color-primary;
+	font-weight: $font-weight-medium;
+	transition: all 0.4s ease-out;
+
+	&.radius { border-radius: .4rem; }
+}
