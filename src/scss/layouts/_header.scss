@@ -1,33 +1,152 @@
-.header {
+.mainHeader {
 	position: fixed;
 	left: 0;
 	top: 0;
-	right: 0;
-	z-index: 999;
+	z-index: 100;
+	right: 30rem;
 	display: flex;
 	background: white;
-	box-shadow: $box-shadow-bottom;
+	// box-shadow: $box-shadow-bottom;
 
-	&__menu {
+	&.inner {
+		right: 0;
 		display: flex;
-		padding: 1.5rem;
+		padding: 0 1.5rem;
 		align-items: center;
+		padding-left: 25rem;
 	}
 
 	&__logo {
 		display: flex;
 		margin-left: 1rem;
-		// padding: 2rem 0 1rem;
-		padding: 2rem 0;
+		padding: 1.5rem 0;
 		align-items: center;
-		svg { display: block; }
+		img { display: block; width: 12.5rem; }
 		.text { font-size: $font-size-big; line-height: 3rem; }
 	}
-	
-	&__notification {
+	&__menu {
 		display: flex;
-		padding: 1.5rem;
-		margin-left: auto;
+		padding: 0 1.5rem;
 		align-items: center;
+		margin-left: auto;
+
+		ul {
+			margin: 0;
+			display: flex;
+			align-items: center;
+
+			li {
+				position: relative;
+				display: block;
+
+				&.homeIcon {
+					img {
+						width: 2rem;
+					}
+					a:after { display: none; }
+
+					&:hover {
+						img {
+							transform: scale(1.05);
+						}
+					}
+				}
+
+				i {
+					display: block;
+				}
+
+				a {
+					display: block;
+					padding: 1rem 2rem;
+					color: $color-dark1;
+					font-weight: 600;
+
+					&:after {
+						content: '';
+						position: absolute;
+						left: 50%;
+						top: 100%;
+						width: 0;
+						height: 2px;
+						transform: translateX(-50%);
+						background-color: $color-primary;
+						transition: all .2s ease-in-out;
+					}
+				}
+
+				&:hover {
+					a {
+						color: $color-primary;
+
+						&:after {
+							width: 40%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.searchInputForm {
+	flex-grow: 1;
+	margin-left: 2rem;
+	
+	form {
+		display: flex;
+		padding: 1rem 0;
+		align-items: center;
+	
+		i {
+			display: block;
+		}
+		.form-control {
+			border: none;
+			box-shadow: none;
+		}
+	}
+}
+
+.dashboardMenus {
+	display: flex;
+	flex-shrink: 0;
+	margin-left: auto;
+	align-items: center;
+
+	.link {
+		padding: 1rem;
+
+		i {
+			display: block;
+			color: rgba($color-dark1, 0.5);
+
+			&:hover {
+				color: $color-primary;
+			}
+		}
+	}
+	.profileWidget {
+		position: relative;
+		margin-left: 1rem;
+
+		.dropdown-toggle {
+			border: none;
+			outline: none;
+			padding: 1.1rem 1rem;
+			background: none;
+		}
+		.dropdown-menu {
+			border: none;
+			border-radius: 0;
+			box-shadow: none;
+
+			a {
+				padding: 1rem;
+			}
+			.divider {
+				margin: 2px 0;
+			}
+		}
 	}
 }

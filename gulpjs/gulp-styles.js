@@ -29,7 +29,8 @@ export const stylesProd = () => {
         .pipe(sass())
         // Add browser list in package json as recommended
         .pipe(autoprefixer({ cascade: false }))
-        // .pipe(cleanCSS({compatibility: 'ie8'}))
+        // added to minify css
+        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(rename({
             basename: 'style',
             suffix: '.min'

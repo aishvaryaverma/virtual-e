@@ -1,0 +1,66 @@
+.sidebar {
+    position: relative;
+    z-index: 101;
+    width: 25rem;
+    flex-shrink: 0;
+    background: white;
+    min-height: calc(100vh - 54px);
+
+    .logoBox {
+        display: flex;
+        padding: 1rem;
+        justify-content: center;
+
+        img {
+            margin-top: -54px;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+
+        a {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            font-size: 15px;
+            padding: 1.2rem 2rem;
+            color: $color-dark1;
+            align-items: center;
+            transition: none;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba($color-dark1, 0.2);
+
+            &:last-child { border-bottom: none; }
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 0;
+                height: 100%;
+                z-index: -1;
+                background-color: $color-primary;
+                transition: width 100ms ease-out;
+                border-radius: 0 25px 25px 0;
+            }
+            .material-icons {
+                font-size: 18px;
+                color: #c0b1c2;
+            }
+
+            &:hover, &.active {
+                color: white;
+                
+                .material-icons {
+                    color: white;
+                }
+                &::before {
+                    width: 98%;
+                }
+            }
+        }
+    }
+}

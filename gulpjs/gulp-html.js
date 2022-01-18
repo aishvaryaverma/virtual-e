@@ -6,7 +6,8 @@ import fileinclude from 'gulp-file-include';
 const path = './src/html/';
 
 const pages = [
-    path + 'index.html'
+    path + 'index.html',
+    path + 'dashboard.html'
 ];
 
 // FOR HTML PAGES

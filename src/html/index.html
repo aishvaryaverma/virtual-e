@@ -2,16 +2,39 @@
 <html lang="en">
 <head>
     @@include('./layouts/_head.html', {
-        "title": "Title"
+        "title": "Virtual E"
     })
 </head>
-<body>
-    
+
+<body class="lock">
     @@include('./layouts/_header.html')
 
-    Homepage
+    <div class="loginLandingScreen">
+        <div class="contentBox">
+            <div class="titleText">
+                Text Here
+            </div>
+            <p>It is a long established fact that a reader will be distracted by the readable <br> content of a page when looking at its layout.</p>
+        </div>
+        <div class="cloudsBlue"><img src="img/cloud-blue.png" alt="clouds"></div>
+        <div class="cloudsGreen"><img src="img/cloud-green.png" alt="clouds"></div>
+        <div class="pencilRocket"><img src="img/pencil-rocket.png" alt="pencil rocket"></div>
 
-    @@include('./layouts/_footer.html')
+        <div class="loginSection">
+            <form class="loginForm">
+                <h2 class="size36 color-secondary">login</h2>
+                <div class="inputGroup">
+                    <input type="text" class="form-control">
+                    <button type="submit" class="btn btn-primary">
+                        <img src="img/arrow-right.png" alt="arrow">
+                    </button>
+                </div>
+                <div class="divider">OR</div>
+                <a href="#" class="btn btn-primary btn-large text-uppercase">Register</a>
+                <div class="text">If you don't have an account register here.</div>
+            </form>
+        </div>
+    </div>
     
     @@include('./layouts/_scripts.html')
     

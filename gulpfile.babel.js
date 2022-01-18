@@ -25,7 +25,7 @@ export const paths = {
     }
 };
 
-// You can use multiple globbing patterns as you would with `gulp.src`,
+// You can use multiple globing patterns as you would with `gulp.src`,
 // for example if you are using del 2.0 or above, return its promise
 export const clean = () => del([
     'build/css/style.min.css',

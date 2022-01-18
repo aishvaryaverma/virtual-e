@@ -1,7 +1,6 @@
 // Buttons
 .btn {
 	font-size: $font-size-tiny;
-	display: inline-flex;
 	border: none;
 	outline: none;
 	line-height: 1;
@@ -14,4 +13,9 @@
 	transition: all 0.4s ease-out;
 
 	&.radius { border-radius: .4rem; }
+
+	&.btn-large {
+		font-size: $font-size-large;
+		padding: 1.2rem 2rem;
+	}
 }

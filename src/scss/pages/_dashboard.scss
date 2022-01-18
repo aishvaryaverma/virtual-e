@@ -1,0 +1,36 @@
+.dashboardLayout {
+    display: flex;
+    padding-top: 54px;
+    min-height: 100vh;
+    background: #f2edf3;
+}
+
+.innerContent {
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    span {
+        color: $color-primary;
+    }
+}
+
+.chooseSubjectList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .subject {
+        cursor: pointer;
+        transition: all 100ms ease-out;
+
+        &:hover {
+            transform: translateY(-1rem);
+        }
+    }
+}

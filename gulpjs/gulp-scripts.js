@@ -7,7 +7,7 @@ import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
 import sourcemaps from 'gulp-sourcemaps';
 
-// FOR JAVASCRIPTS
+// dev
 export const scripts = () => {
     return src(paths.scripts.src)
         .pipe(sourcemaps.init())
@@ -17,6 +17,7 @@ export const scripts = () => {
         .pipe(dest(paths.scripts.dest))
 };
 
+// prod
 export const scriptsProd = () => {
     return src(paths.scripts.src)
         .pipe(sourcemaps.init())

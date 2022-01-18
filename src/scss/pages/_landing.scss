@@ -1,0 +1,133 @@
+.loginLandingScreen {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    padding-top: 8rem;
+    padding-right: 30rem;
+    overflow: hidden;
+
+    .cloudsBlue {
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        z-index: -1;
+
+        img {
+            display: block;
+            width: 80%;
+        }
+    }
+    .cloudsGreen {
+        position: absolute;
+        bottom: -5px;
+        right: 0;
+        z-index: -2;
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+            display: block;
+            max-width: 25rem;
+        }
+    }
+
+    .pencilRocket {
+        position: absolute;
+        left: 10%;
+        bottom: 3rem;
+        z-index: -1;
+
+        img {
+            width: 40rem;
+            transform: rotate(10deg);
+        }
+    }
+
+    .contentBox {
+        padding: 2rem 10rem;
+        text-align: center;
+
+        .titleText {
+            position: relative;
+            z-index: 1;
+            font-size: 4rem;
+            font-weight: 600;
+            color: $color-primary;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 100%;
+                width: 10rem;
+                height: 4px;
+                margin-left: -5rem;
+                background-color: $color-primary;
+            }
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: $color-black;
+        }
+    }
+
+    .loginSection {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -3;
+        width: 30rem;
+        height: 100vh;
+        background: #eff9eb;
+    }
+
+    .loginForm {
+        text-align: center;
+        padding: 12rem 8rem 0 3rem;
+
+        .btn-primary {
+            border-radius: 4px;
+            background: $color-secondary;
+        }
+        .inputGroup {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: -5.5rem;
+
+            .form-control {
+                outline: none;
+                border: none;
+                font-size: 18px;
+                margin-right: 1rem;
+                padding: 2.2rem 1rem;
+                background: $color-dark2;
+                border-radius: 4px;
+            }
+
+            .btn.btn-primary {
+                background: $color-secondary;
+                img { width: 3rem; }
+            }
+        }
+        .divider {
+            font-size: 1.1rem;
+            margin: 1rem 0;
+            font-weight: 600;
+            color: $color-primary;
+        }
+        .btn-large {
+            min-width: 14rem;
+            text-align: center;
+            font-weight: 600;
+        }
+        .text {
+            font-size: 8px;
+            padding-top: 1rem;
+            color: $color-tertiary;
+        }
+    }
+}
