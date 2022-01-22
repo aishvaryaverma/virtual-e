@@ -7,7 +7,8 @@ const path = './src/html/';
 
 const pages = [
     path + 'index.html',
-    path + 'dashboard.html'
+    path + 'dashboard.html',
+    path + 'bookmark.html'
 ];
 
 // FOR HTML PAGES

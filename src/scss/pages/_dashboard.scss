@@ -1,13 +1,15 @@
 .dashboardLayout {
     display: flex;
-    padding-top: 54px;
+    padding-top: 5rem;
     min-height: 100vh;
-    background: #f2edf3;
 }
 
 .innerContent {
     flex-grow: 1;
     padding: 2rem;
+    overflow: auto;
+    background: #f2edf3;
+    height: calc(100vh - 5rem);
 }
 
 .title {
@@ -25,12 +27,105 @@
     flex-wrap: wrap;
     align-items: center;
 
+    &.withName {
+        padding-top: 2rem;
+        .subject {
+            padding: 0 1rem;
+        }
+    }
+
     .subject {
         cursor: pointer;
         transition: all 100ms ease-out;
 
+        .name {
+            font-size: 14px;
+            padding: 1rem;
+            font-weight: 600;
+            text-align: center;
+            color: $color-dark3;
+            text-transform: uppercase;
+        }
+
         &:hover {
             transform: translateY(-1rem);
+        }
+    }
+}
+
+.videoWidget {
+    display: flex;
+    padding: 2rem 0;
+    flex-wrap: wrap;
+
+    .videoCard {
+        position: relative;
+        width: 22rem;
+        height: 14rem;
+        padding: 1rem;
+        margin-right: 2rem;
+        background: rgb(226, 191, 37);
+        border-radius: 1rem;
+
+        .bookmarkIcon {
+            position: absolute;
+            top: -5px;
+            right: 1rem;
+            span { display: block; color: white; font-size: 30px; }
+        }
+
+        .name {
+            font-size: 15px;
+            color: white;
+            padding-top: 2rem;
+        }
+
+        .playIcon {
+            position: absolute;
+            right: 1rem;
+            bottom: 1rem;
+            padding: 5px;
+            cursor: pointer;
+            background: rgba(black, 0.2);
+            border-radius: 50%;
+            span { display: block; color: white; }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.savedQuestionList {
+    display: flex;
+    padding: 2rem 0;
+    flex-direction: column;
+    counter-reset: question;
+
+    .question {
+        position: relative;
+        padding: 2rem;
+        display: flex;
+        margin-bottom: 1rem;
+        align-items: flex-start;
+        background: $color-primary;
+        border-radius: 4px;
+
+        &:before {
+            counter-increment: question;
+            content: "Q" counter(question) ".";
+        }
+
+        .bookmarkIcon {
+            position: absolute;
+            top: -5px;
+            right: 1rem;
+            span { display: block; color: white; font-size: 30px; }
+        }
+
+        .text {
+            padding: 0 1rem;
         }
     }
 }

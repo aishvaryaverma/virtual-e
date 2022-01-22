@@ -3,17 +3,18 @@
     z-index: 101;
     width: 25rem;
     flex-shrink: 0;
+    overflow: auto;
+    margin-top: -5rem;
+    padding-bottom: 5rem;
     background: white;
-    min-height: calc(100vh - 54px);
+    height: calc(100vh);
 
     .logoBox {
+        width: 100%;
+        z-index: 101;
         display: flex;
         padding: 1rem;
         justify-content: center;
-
-        img {
-            margin-top: -54px;
-        }
     }
 
     &__nav {

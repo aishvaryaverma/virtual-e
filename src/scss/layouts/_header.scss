@@ -4,6 +4,7 @@
 	top: 0;
 	z-index: 100;
 	right: 30rem;
+	height: 5rem;
 	display: flex;
 	background: white;
 	// box-shadow: $box-shadow-bottom;
@@ -102,6 +103,7 @@
 			display: block;
 		}
 		.form-control {
+			font-size: 14px;
 			border: none;
 			box-shadow: none;
 		}
