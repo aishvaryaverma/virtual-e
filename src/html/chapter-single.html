@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layouts/_head.html', {
+        "title": "Chapter | Virtual E"
+    })
+</head>
+
+<body class="lock">
+    @@include('./layouts/_header-inner.html')
+
+    <div class="dashboardLayout">
+        @@include('./layouts/_sidebar.html')
+
+        <div class="innerContent">
+            <div class="title">Chapter Motion</div>
+            <div class="tabsBasic">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#videos" aria-selected="true">
+                            <span class="material-icons">play_arrow</span>
+                            Videos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#test" aria-selected="false">
+                            <span class="material-icons">assignment</span>
+                            Test
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#questionBank" aria-selected="false">
+                            <span class="material-icons">library_books</span>
+                            Ques-Bank
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#notes" aria-selected="false">
+                            <span class="material-icons">summarize</span>
+                            Notes
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade" id="videos">
+                        <div class="widgetListBox">
+                            @@loop('./snippets/video-article.html', [
+                                { "title": "1. Velocity", "image": "img/books/book5.jpg" },
+                                { "title": "2. Introduction", "image": "img/books/book2.jpg" },
+                                { "title": "3. Distance & Displacement", "image": "img/books/book3.jpg" },
+                                { "title": "4. Average Velocity", "image": "img/books/book4.jpg" },
+                                { "title": "1. Velocity", "image": "img/books/book1.jpg" },
+                                { "title": "2. Introduction", "image": "img/books/book4.jpg" },
+                                { "title": "3. Distance & Displacement", "image": "img/books/book2.jpg" },
+                                { "title": "4. Average Velocity", "image": "img/books/book3.jpg" },
+                            ])
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="test">
+                        <div class="widgetListBox">
+                            @@loop('./snippets/test-article.html', [
+                                { "title": "Test 1", "image": "img/contract-with-pen.png", "buttonText": "Start" },
+                                { "title": "Test 2", "image": "img/contract-with-pen.png", "buttonText": "Start" },
+                                { "title": "Test 3", "image": "img/contract-with-pen.png", "buttonText": "Start" },
+                                { "title": "Test 4", "image": "img/contract-with-pen.png", "buttonText": "Start" },
+                                { "title": "Test 5", "image": "img/contract-with-pen.png", "buttonText": "Start" },
+                                { "title": "Test 6", "image": "img/contract-with-pen.png", "buttonText": "Start" },
+                            ])
+                        </div>
+                    </div>
+                    <div class="tab-pane fade show active" id="questionBank">
+                        <div class="widgetListBox">
+                            @@loop('./snippets/test-article.html', [
+                                { "title": "Multiple Choice Question", "image": "img/multi-docs.png", "buttonText": "View" },
+                                { "title": "Answer in brief", "image": "img/multi-docs.png", "buttonText": "View" },
+                                { "title": "Answer in detail", "image": "img/multi-docs.png", "buttonText": "View" },
+                            ])
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="notes">
+                        <div class="widgetListBox">
+                            @@loop('./snippets/test-article.html', [
+                                { "title": "Chp - Motion Part 1", "image": "img/multi-docs.png", "buttonText": "View" },
+                                { "title": "Chp - Motion Part 2", "image": "img/multi-docs.png", "buttonText": "View" },
+                                { "title": "Chp - Motion Part 3", "image": "img/multi-docs.png", "buttonText": "View" },
+                            ])
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    @@include('./layouts/_scripts.html')
+</body>
+</html>

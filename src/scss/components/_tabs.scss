@@ -1,14 +1,12 @@
-
-
 .tabsBasic {
-    padding: 1rem;
+    padding: 1rem 0;
 
     .nav {
-        width: 100%;
+        // width: 100%;
         display: flex;
+        border: none;
         margin: 0 -1rem;
         align-items: center;
-        border: none;
         justify-content: space-between;
 
         li.nav-item {
@@ -17,7 +15,9 @@
             margin: 0 1rem;
 
             a.nav-link {
-                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 border: none;
                 padding: 1rem;
                 font-size: 15px;
@@ -28,6 +28,10 @@
                 text-transform: uppercase;
                 box-shadow: $box-shadow-bottom;
                 border-radius: 4px;
+
+                .material-icons {
+                    margin-right: 1rem;
+                }
 
                 &.active {
                     color: white;

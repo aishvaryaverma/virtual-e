@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layouts/_head.html', {
+        "title": "Dashboard | Virtual E"
+    })
+</head>
+
+<body class="lock">
+    @@include('./layouts/_header-inner.html')
+
+    <div class="dashboardLayout">
+        @@include('./layouts/_sidebar.html')
+
+        <div class="innerContent">
+            <div class="title margin-bottom-20">Physis <br> <span class="uppercase">1. Introduction</span></div>
+
+            @@include('./snippets/video-player.html')
+
+            <div class="title uppercase margin-top-20">Upcoming <span> Videos</span></div>
+            <div class="widgetListBox horizontal-scroll paddint-top-0">
+                @@loop('./snippets/video-article.html', [
+                    { "title": "1. Velocity", "image": "img/books/book5.jpg"},
+                    { "title": "2. Introduction", "image": "img/books/book2.jpg"},
+                    { "title": "3. Distance & Displacement", "image": "img/books/book3.jpg"},
+                    { "title": "4. Average Velocity", "image": "img/books/book4.jpg"},
+                    { "title": "1. Velocity", "image": "img/books/book1.jpg"},
+                    { "title": "2. Introduction", "image": "img/books/book4.jpg"},
+                    { "title": "3. Distance & Displacement", "image": "img/books/book2.jpg"},
+                    { "title": "4. Average Velocity", "image": "img/books/book3.jpg"},
+                ])
+            </div>
+            
+        </div>
+    </div>
+    
+    @@include('./layouts/_scripts.html')
+</body>
+</html>

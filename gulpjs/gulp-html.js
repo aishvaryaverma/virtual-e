@@ -8,7 +8,13 @@ const path = './src/html/';
 const pages = [
     path + 'index.html',
     path + 'dashboard.html',
-    path + 'bookmark.html'
+    path + 'bookmark.html',
+    path + 'chapter-screen.html',
+    path + 'chapter-single.html',
+    path + 'video-player.html',
+    path + 'document-viewer.html',
+    path + 'quiz.html',
+    path + 'quiz-result.html',
 ];
 
 // FOR HTML PAGES

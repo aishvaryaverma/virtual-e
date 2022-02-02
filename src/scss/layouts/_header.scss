@@ -140,10 +140,13 @@
 		}
 		.dropdown-menu {
 			border: none;
-			border-radius: 0;
+			width: 18rem;
 			box-shadow: none;
+			border-radius: 0 0 5px 5px;
 
 			a {
+				display: block;
+				font-size: 14px;
 				padding: 1rem;
 			}
 			.divider {

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layouts/_head.html', {
+        "title": "Dashboard | Virtual E"
+    })
+</head>
+
+<body class="lock">
+    @@include('./layouts/_header-inner.html')
+
+    <div class="dashboardLayout">
+        @@include('./layouts/_sidebar.html')
+
+        <div class="innerContent">
+            <div class="title">Resume where <span>you left</span></div>
+            <div class="widgetListBox horizontal-scroll">
+                @@loop('./snippets/video-article.html', [
+                    { "title": "1. Velocity", "image": "img/books/book1.jpg"}
+                ])
+            </div>
+            <div class="separator"></div>
+            <div class="tabsBasic">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#term1" aria-selected="true">Term 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#term2" aria-selected="false">Term 2</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="term1">
+                        <div class="title uppercase margin-top-20">Chapter:<span> Motion</span></div>
+                        <div class="widgetListBox horizontal-scroll paddint-top-0">
+                            @@loop('./snippets/video-article.html', [
+                                { "title": "1. Velocity", "image": "img/books/book5.jpg"},
+                                { "title": "2. Introduction", "image": "img/books/book2.jpg"},
+                                { "title": "3. Distance & Displacement", "image": "img/books/book3.jpg"},
+                                { "title": "4. Average Velocity", "image": "img/books/book4.jpg"},
+                                { "title": "1. Velocity", "image": "img/books/book1.jpg"},
+                                { "title": "2. Introduction", "image": "img/books/book4.jpg"},
+                                { "title": "3. Distance & Displacement", "image": "img/books/book2.jpg"},
+                                { "title": "4. Average Velocity", "image": "img/books/book3.jpg"},
+                            ])
+                        </div>
+
+                        <div class="separator"></div>
+
+                        <div class="title uppercase margin-top-20">Chapter:<span> Motion</span></div>
+                        <div class="widgetListBox horizontal-scroll paddint-top-0">
+                            @@loop('./snippets/video-article.html', [
+                                { "title": "1. Velocity", "image": "img/books/book5.jpg"},
+                                { "title": "2. Introduction", "image": "img/books/book2.jpg"},
+                                { "title": "3. Distance & Displacement", "image": "img/books/book3.jpg"},
+                                { "title": "4. Average Velocity", "image": "img/books/book4.jpg"},
+                                { "title": "1. Velocity", "image": "img/books/book1.jpg"},
+                                { "title": "2. Introduction", "image": "img/books/book4.jpg"},
+                                { "title": "3. Distance & Displacement", "image": "img/books/book2.jpg"},
+                                { "title": "4. Average Velocity", "image": "img/books/book3.jpg"},
+                            ])
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="term2">
+                        term2
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    @@include('./layouts/_scripts.html')
+</body>
+</html>

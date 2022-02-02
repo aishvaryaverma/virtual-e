@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layouts/_head.html', {
+        "title": "Dashboard | Virtual E"
+    })
+</head>
+
+<body class="lock">
+    @@include('./layouts/_header-inner.html')
+
+    <div class="dashboardLayout">
+        @@include('./layouts/_sidebar.html')
+
+        <div class="innerContent">
+            <div class="title uppercase">
+                Choose Subject for <span>Sample Papers</span>
+            </div>
+            
+
+            <div class="chooseSubjectList">
+                <div class="subject"><img src="img/topics-full/chemistry.png" alt="chemistry"></div>
+                <div class="subject"><img src="img/topics-full/physics.png" alt="physics"></div>
+                <div class="subject"><img src="img/topics-full/biology.png" alt="biology"></div>
+                <div class="subject"><img src="img/topics-full/mathematics.png" alt="mathematics"></div>
+                <div class="subject"><img src="img/topics-full/english.png" alt="english"></div>
+                <div class="subject"><img src="img/topics-full/geography.png" alt="geography"></div>
+                <div class="subject"><img src="img/topics-full/history.png" alt="history"></div>
+                <div class="subject"><img src="img/topics-full/economics.png" alt="economics"></div>
+                <div class="subject"><img src="img/topics-full/civics.png" alt="civics"></div>
+            </div>
+        </div>
+    </div>
+    
+    @@include('./layouts/_scripts.html')
+</body>
+</html>

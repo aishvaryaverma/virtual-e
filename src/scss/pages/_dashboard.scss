@@ -14,8 +14,7 @@
 
 .title {
     font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-weight: 700;
 
     span {
         color: $color-primary;
@@ -53,19 +52,58 @@
     }
 }
 
-.videoWidget {
+.widgetListBox {
     display: flex;
     padding: 2rem 0;
     flex-wrap: wrap;
+    margin: 0 -1rem;
+
+    &.horizontal-scroll {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        .paddingWrapper { margin-bottom: 0; }
+    }
+
+    .paddingWrapper {
+        padding: 0 1rem;
+        width: 25%;
+        height: 14rem;
+        flex-shrink: 0;
+        margin-bottom: 2rem;
+        
+        &:nth-child(2n) .videoCard::before { background: rgba($color-pink, 0.8); }
+        &:nth-child(3n) .videoCard::before { background: rgba($color-blue, 0.8); }
+        &:nth-child(4n) .videoCard::before { background: rgba($color-secondary, 0.8); }
+        &:nth-child(5n) .videoCards::before { background: rgba($color-purple, 0.8); }
+
+        &.col3 {
+            width: 33.33%;
+            height: auto;
+        }
+    }
 
     .videoCard {
         position: relative;
-        width: 22rem;
+        z-index: 1;
+        // width: 22rem;
         height: 14rem;
         padding: 1rem;
-        margin-right: 2rem;
-        background: rgb(226, 191, 37);
+        flex-shrink: 0;
+        overflow: hidden;
+        margin-bottom: 2rem;
         border-radius: 1rem;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: rgba($color-yellow, 0.8);
+        }
 
         .bookmarkIcon {
             position: absolute;
@@ -73,13 +111,19 @@
             right: 1rem;
             span { display: block; color: white; font-size: 30px; }
         }
-
+        .image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
         .name {
             font-size: 15px;
             color: white;
             padding-top: 2rem;
         }
-
         .playIcon {
             position: absolute;
             right: 1rem;
@@ -93,6 +137,36 @@
             &:hover {
                 transform: scale(1.1);
             }
+        }
+    }
+
+    .testCard {
+        background: white;
+        border-radius: 1rem;
+        box-shadow: $box-shadow-bottom;
+
+        .contentBox {
+            display: flex;
+            padding: 4rem 2rem;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                display: block;
+                // width: 5rem;
+                margin-right: 1rem;
+            }
+            span {
+                display: block;
+                max-width: 45%;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+
+        .btn {
+            width: 100%;
+            border-radius: 5px;
         }
     }
 }
@@ -127,5 +201,23 @@
         .text {
             padding: 0 1rem;
         }
+    }
+}
+
+.documentViewer {
+    position: relative;
+    z-index: 1;
+    height: calc(100vh - 130px);
+    border: 5px solid white;
+    box-shadow: $box-shadow-bottom;
+    border-radius: 5px;
+
+    embed {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 }
