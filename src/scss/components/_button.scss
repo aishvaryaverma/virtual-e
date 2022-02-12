@@ -13,6 +13,12 @@
 	transition: all 0.4s ease-out;
 
 	&.radius { border-radius: .4rem; }
+	&.btn-full { width: 100%; }
+
+	&.btn-flex {
+		display: flex;
+		align-items: center;
+	}
 
 	&.btn-large {
 		font-size: $font-size-large;

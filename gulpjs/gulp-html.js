@@ -15,6 +15,7 @@ const pages = [
     path + 'document-viewer.html',
     path + 'quiz.html',
     path + 'quiz-result.html',
+    path + 'select-plan.html',
 ];
 
 // FOR HTML PAGES

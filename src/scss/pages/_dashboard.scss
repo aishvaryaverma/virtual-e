@@ -12,6 +12,15 @@
     height: calc(100vh - 5rem);
 }
 
+.flexBox {
+    display: flex;
+    align-items: center;
+
+    &.justify {
+        justify-content: space-between;
+    }
+}
+
 .title {
     font-size: 18px;
     font-weight: 700;
@@ -219,5 +228,195 @@
         left: 0;
         width: 100%;
         height: 100%;
+    }
+}
+
+.quizBox {
+    padding: 5rem;
+
+    .quizProgressBar {
+        display: flex;
+        margin: 0 auto;
+        // max-width: 60%;
+        max-width: 50rem;
+        align-items: center;
+        padding-bottom: 1rem;
+        justify-content: space-between;
+        border-bottom: 2px solid $color-dark3;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 600;
+            width: 4rem;
+            height: 4rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+
+            &:hover {
+                font-size: 18px;
+                background: white;
+            }
+            &.active {
+                font-size: 18px;
+                color: white;
+                background: $color-primary;
+            }
+            &.correct {
+                color: white;
+                background: $color-primary;
+            }
+            &.wrong {
+                color: white;
+                background: $color-red;
+            }
+        }
+    }
+
+    .quizQuestion {
+        margin: 5rem 0;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 3rem;
+    }
+
+    .answerList {
+        display: flex;
+        flex-direction: column;
+
+        .answer {
+            position: relative;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            background: white;
+            margin-bottom: 2rem;
+            padding: 1.2rem 4rem 1.2rem 2rem;
+            box-shadow: $box-shadow-bottom;
+            transition: transform 200ms ease-out;
+            border-radius: 6px;
+
+            &::after {
+                font-family: 'Material Icons';
+                position: absolute;
+                top: 50%;
+                right: 1.5rem;
+                font-size: 24px;
+                color: white;
+                font-weight: 600;
+                transform: translateY(-50%);
+            }
+
+            &:hover {
+                transform: scale(1.01);
+            }
+
+            &.correct {
+                color: white;
+                background: $color-primary;
+
+                &::after {
+                    content: 'done';
+                }
+            }
+            &.wrong {
+                color: white;
+                background: $color-red;
+
+                &::after {
+                    content: 'close';
+                }
+            }
+        }
+    }
+
+    .quizButtons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &.centered {
+            margin: 0 auto;
+            width: 50rem;
+
+            .btn-full {
+                display: block;
+                width: 100%;
+            }
+        }
+        .btn {
+            width: 14rem;
+            font-size: 16px;
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+            justify-content: center;
+
+            .material-icons {
+                width: 15px;
+                margin: 0 5px;
+                font-size: 24px;
+                text-align: center;
+            }
+        }
+    }
+
+    .solutionBox {
+        margin-top: 5rem;
+        min-height: 14rem;
+        padding: 1.5rem 2rem;
+        background: rgb(237, 255, 237);
+        box-shadow: $box-shadow-bottom;
+        border-radius: 6px;
+    }
+
+    .scoreBox {
+        padding: 3rem;
+        max-width: 50rem;
+        margin: 3rem auto;
+        background: white;
+        box-shadow: $box-shadow-bottom;
+        border-radius: 6px;
+
+        .text {
+            font-size: 4rem;
+            font-weight: 700;
+            text-align: center;
+
+            .correctScore {
+                color: $color-primary;
+            }
+            .separator {
+                margin: 0 5px;
+                background: none;
+            }
+        }
+
+        &.flexBox {
+            padding: 2rem;
+        }
+
+        .questionCount {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            flex-grow: 1;
+            flex-basis: 0;
+            border-right: 1px solid $color-dark3;
+            &:last-child { border-right: none; }
+
+            span {
+                font-size: 3rem;
+                font-weight: 700;
+            }
+            .title {
+                font-size: 14px;
+                padding-top: 1rem;
+                text-transform: uppercase;
+            }
+        }
     }
 }
