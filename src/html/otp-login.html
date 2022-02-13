@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./layouts/_head.html', {
+    "title": "Dashboard | Virtual E"
+    })
+</head>
+
+<body>
+    <div class="registrationProcess">
+        <div class="cloudsBlue"><img src="img/cloud-blue.png" alt="clouds"></div>
+        <div class="cloudsGreen"><img src="img/cloud-green.png" alt="clouds"></div>
+
+        <div class="mainHeading">
+            <div class="innerWrap">
+                Student Registration
+            </div>
+        </div>
+
+        <div class="registerForm">
+            <p>Number of Student registration: 1</p>
+            <form>
+                <div class="otpForm">
+                    <input type="number" class="form-control" placeholder="Enter Mobile Number">
+                    <button type="submit" class="btn btn-primary">Send OTP</button>
+                </div>
+                <div class="otpForm">
+                    <input type="number" class="form-control" placeholder="Enter OTP">
+                    <button type="submit" class="btn btn-primary margin-left-5">Verify</button>
+                    <button type="submit" class="btn btn-primary margin-left-5">Resend</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    @@include('./layouts/_scripts.html')
+</body>
+
+</html>

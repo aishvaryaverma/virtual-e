@@ -1,33 +1,30 @@
-.custom-form {
-	padding: 0;
+.form-control {
+	height: auto;
+	font-size: 14px;
+	padding: 8px 12px;
+	min-width: 22rem;
+}
 
-	.field {
-		margin-bottom: 2rem;
+.otpForm {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
 
-		label {
-			font-weight: 600;
-		}
-		.input input,
-		.selection {
-			font-size: $font-size-default;
-			line-height: 2.6rem;
-			padding: 1rem 2rem;
-			border-color: #cccccc;
-			border-radius: 0 !important;
-
-			.icon {
-				top: 1.3rem;
-			}
-		}
-		.prompt.label {
-			font-weight: 700;
-			font-size: 1.2rem;
-		}
-		.errorMsg {
-			display: block;
-			font-size: 1.3rem;
-			color: red;
-			text-align: right;
-		}
+	.form-control {
+		flex-grow: 1;
 	}
+	.btn {
+		font-size: 15px;
+		flex-shrink: 0;
+		font-weight: 600;
+		line-height: 20px;
+		flex-basis: 14rem;
+		margin-left: -1px;
+	}
+}
+
+.custom-select {
+	font-size: 14px;
+	height: auto;
+	padding: 12px;
 }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./layouts/_head.html', {
+    "title": "Dashboard | Virtual E"
+    })
+</head>
+
+<body>
+    <div class="registrationProcess">
+        <div class="cloudsBlue"><img src="img/cloud-blue.png" alt="clouds"></div>
+        <div class="cloudsGreen"><img src="img/cloud-green.png" alt="clouds"></div>
+
+        <div class="mainHeading">
+            <div class="innerWrap">
+                Payment
+            </div>
+        </div>
+
+        <div class="paymentPage">
+            <div class="billType">
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline1">Monthly</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">Annual</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Subject list of Commerce standard</p>
+                    <div class="chooseSubjectForm">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="allSubject">
+                            <label class="custom-control-label" for="allSubject">Select All</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="businessStudies">
+                            <label class="custom-control-label" for="businessStudies">Business Studies</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="english">
+                            <label class="custom-control-label" for="english">English</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="accountancy">
+                            <label class="custom-control-label" for="accountancy">Accountancy</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="indianEconomy">
+                            <label class="custom-control-label" for="indianEconomy">Indian Economy</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="marcoEconomy">
+                            <label class="custom-control-label" for="marcoEconomy">Marco Economy</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="priceTable">
+                        <span>Per Subject Price:</span>
+                        <span>Rs. 6,000</span>
+                    </div>
+                    <div class="priceTable">
+                        <span>All Subject Price:</span>
+                        <span>Rs. 18,000</span>
+                    </div>
+                    <div class="priceTable">
+                        <span>Discount:</span>
+                        <span>1%</span>
+                    </div>
+                    <div class="priceTable">
+                        <span>Total Amount:</span>
+                        <span>17,820</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="floatingButton">
+                <a href="#" class="btn btn-primary btn-full btn-large radius">Submit</a>
+            </div>
+        </div>
+    </div>
+
+    @@include('./layouts/_scripts.html')
+</body>
+</html>

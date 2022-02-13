@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./layouts/_head.html', {
+    "title": "Dashboard | Virtual E"
+    })
+</head>
+
+<body>
+    <div class="registrationProcess">
+        <div class="cloudsBlue"><img src="img/cloud-blue.png" alt="clouds"></div>
+        <div class="cloudsGreen"><img src="img/cloud-green.png" alt="clouds"></div>
+
+        <div class="mainHeading">
+            <div class="innerWrap">
+                Select Standard
+            </div>
+        </div>
+
+        <div class="registerForm">
+            <p>Standard for : Aashu verma</p>
+            <select class="custom-select">
+                <option selected>Select Standard</option>
+                <option value="1">9</option>
+                <option value="2">10</option>
+                <option value="3">11 (commerce)</option>
+                <option value="3">12 (commerce)</option>
+            </select>
+
+            <div class="floatingButton">
+                <a href="#" class="btn btn-primary btn-full btn-large radius">Next</a>
+            </div>
+        </div>
+    </div>
+
+    @@include('./layouts/_scripts.html')
+</body>
+</html>

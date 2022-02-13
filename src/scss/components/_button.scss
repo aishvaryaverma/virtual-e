@@ -19,7 +19,10 @@
 		display: flex;
 		align-items: center;
 	}
-
+	&.btn-white {
+		background: white;
+		color: $color-dark3;
+	}
 	&.btn-large {
 		font-size: $font-size-large;
 		padding: 1.2rem 2rem;

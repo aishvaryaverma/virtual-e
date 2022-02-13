@@ -1,9 +1,34 @@
 .registrationProcess {
     position: relative;
     z-index: 1;
-    height: 100vh;
-    overflow: auto;
-    padding-top: 5rem;
+    min-height: 100vh;
+    // overflow: auto;
+    padding: 5rem 0;
+
+    .cloudsBlue {
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        z-index: -1;
+
+        img {
+            display: block;
+            width: 50%;
+        }
+    }
+    .cloudsGreen {
+        position: absolute;
+        bottom: -5px;
+        right: 0;
+        z-index: -2;
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+            display: block;
+            max-width: 25rem;
+        }
+    }
 
     &::before {
         display: block;
@@ -29,11 +54,15 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             border-bottom: 5px solid white;
+
+            &.small {
+                font-size: 2rem;
+            }
         }
     }
 
     .selectPlanBoxes {
-        margin: 3rem auto;
+        margin: 3rem auto 0;
         display: flex;
         max-width: 90rem;
         justify-content: space-evenly;
@@ -53,10 +82,116 @@
 
                 img {
                     display: block;
-                    width: 32rem;
+                    width: 30rem;
                     height: auto;
                 }
             }
+
+            .plan-desc {
+                min-height: 300px;
+                padding: 3rem 5rem;
+                background: #002fbb;
+                background: linear-gradient(to bottom, #04094b, #002fbb);
+                border-radius: 2rem 2rem 0 0;
+
+                ul {
+                    margin: 0;
+                    padding: 2rem 0;
+
+                    li {
+                        font-size: 14px;
+                        color: white;
+                        line-height: 24px;
+                    }
+                }
+                .btn {
+                    font-size: 14px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        transform: translateY(-2px);
+                    }
+                }
+            }
         }
+    }
+
+    .registerForm {
+        position: relative;
+        padding: 4rem;
+        max-width: 70rem;
+        min-height: 24rem;
+        margin: 3rem auto 0;
+        background: white;
+        box-shadow: 0 4px 6px 0 rgba(black, 0.09);
+        border-radius: 8px;
+    }
+    .floatingButton {
+        position: absolute;
+        bottom: -2rem;
+        left: 50%;
+        width: 20rem;
+        transform: translateX(-50%);
+    }
+}
+
+.paymentPage {
+    position: relative;
+    padding: 4rem;
+    max-width: 80rem;
+    min-height: 24rem;
+    margin: 3rem auto 0;
+    background: white;
+    box-shadow: 0 4px 6px 0 rgba(black, 0.09);
+    border-radius: 8px;
+
+    .billType {
+        text-align: center;
+        margin-bottom: 20px;
+
+        .custom-control-label::before,
+        .custom-control-label::after {
+            width: 1.6rem;
+            height: 1.6rem;
+
+        }
+        .custom-control-label {
+            cursor: pointer;
+            padding-left: 1rem;
+        }
+    }
+
+    p span {
+        display: inline-block;
+        color: #666;
+    }
+
+    .chooseSubjectForm {
+
+        .custom-checkbox {
+            cursor: pointer;
+            margin-bottom: 1rem;
+
+            label {
+                padding-left: 1rem;
+                cursor: pointer;
+                align-items: center;
+                display: flex;
+            }
+        }
+        .custom-control-label::before,
+        .custom-control-label::after {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+
+    .priceTable {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
     }
 }

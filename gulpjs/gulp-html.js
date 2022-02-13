@@ -16,6 +16,10 @@ const pages = [
     path + 'quiz.html',
     path + 'quiz-result.html',
     path + 'select-plan.html',
+    path + 'otp-login.html',
+    path + 'student-info.html',
+    path + 'select-standard.html',
+    path + 'payment.html',
 ];
 
 // FOR HTML PAGES
